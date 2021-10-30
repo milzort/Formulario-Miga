@@ -1,0 +1,29 @@
+{
+    "Actividades":[
+        {"clave":"Artísticas","Categoria":"Artisticas",
+        "Actividad":["Graffiti", "Artes gráficas", "Música",
+            "Danza","Teatro y/o performance","Literatura", "Otras"]
+            },
+        {"clave":"Deportivas","Categoria":"Deportivas",
+            "Actividad":["Deporte individual de alto rendimiento","Deporte de equipo de alto rendimiento",
+                "Deporte individual amateur","Deporte de equipo amateur","Solo acondicionamiento físico"]
+                },
+        {"clave":"Políticas","Categoria":"Politicas",
+                "Actividad":["Militancia partidista", "Consejos universitarios", "Comités universitarios",
+                    "Semilleros políticos", "Escuela de formación política", "Clubes de debates",
+                    "Otras"]
+                    },
+        {"clave":"Ong","Categoria":"Ong, organizaciones sin fines de lucro",
+                "Actividad":["Ayuda a grupos vulnerables", "Ayuda a grupos no vulnerables", "Medioambientales",
+                    "Derechos humanos", "Participación política" ]
+                    },
+        {"clave":"Gpo_ayud","Categoria":"Grupos de ayuda",
+                        "Actividad":["AA", "ALANON",  "Alateen", "Centros de integración juvenil",
+                            "Grupos de iglesia", "Atención psicológica"]
+                            },
+        {"clave":"Labor_com","Categoria":"Labor comunitaria",
+                        "Actividad":["Presupuestos vecinales", "Ocupación y recuperación de espacios",
+                            "Organización comunitaria y vecinal", "Intergación comunitaria","Otras"]
+                            }
+    ]
+}

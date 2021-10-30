@@ -1,0 +1,27 @@
+{"Trabjo":[
+    {"Ocupacion":"Emplead@ en el sector privado",
+        "Area":["Area biológicos y/ o de la salud", "Area de las humanidades y las artes","Area de las ciencias sociales","Area físico matemáticas y las ingenierías",
+            "Area del sector comercial"]},
+    {"Ocupacion":"Emplead@ en el sector público",
+        "Area":["Gobierno local",
+            "Gobierno federal", "Sindicatos y/o organizaciones políticas","Organizaciones de la sociedad civil","Poder legislativo", "Poder judicial"]},
+    {"Ocupacion":"Estudiante ",
+        "Area":["Secundaria","Preparatoria", "Universidad","Posgrado"]},
+    {"Ocupacion":"Desemplead@ / Pensionad@",
+        "Area":["Pensionad@","En búsqueda de empleo","No interesado en buscar empleo"]},
+    {"Ocupacion":"Emplead@ informal",
+        "Area":["Comerciante", "Aplicaciones digitales", "Trabajo doméstico","Chofer", "Otro"]},
+    {"Ocupacion":"Trabajo doméstico y/o de cuidado",
+        "Area":["Labores domésticas", "Cuidado de adultos mayores", "Cuidado de niños", "Cuidado de familiares",
+            "Cuidado de enfermos", "Otro"]},
+    {"Ocupacion":"Negocio propio y/o familiar",
+        "Area":["Negocio propio", "Negocio familiar","Negocio propio y familiar"]},
+    {"Ocupacion":"Freelancer",
+        "Area":["Area biológicos y/ o de la salud", "Area de las humanidades y las artes",
+            "Area de las ciencias sociales", "Area físico matemáticas y las ingenierías"]},
+    {"Ocupacion":"Docencia / Academía",
+        "Area":["Docente en educación Básica","Docente en educación Superior","Investigador"]},
+    {"Ocupacion":"Nivel de Estudios ",
+        "Area":["Primaria","Secundaria","Preparatoria", "Universidad","Posgrado"]}
+]
+}
