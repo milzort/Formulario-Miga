@@ -49,7 +49,7 @@ export default function Dat_parti_2(){
 
         tatu_1 ? (
         <>
-        <h2>¿A qué actividades podrías integrarte?</h2>
+        <h5>¿A qué actividades podrías integrarte?</h5>
         <h5>Puedes seleccionar hasta tres casillas</h5>
        
         <label htmlFor="Acti_Proy">Grupos de discusión de temas específicos</label>
@@ -107,8 +107,8 @@ export default function Dat_parti_2(){
                 )}
 
            <br /> <br />
-            <h2>¿Cuántas horas podrías dedicarle a la semana
-                          a dichas actividades?</h2>
+            <h5>¿Cuántas horas podrías dedicarle a la semana
+                          a dichas actividades?</h5>
 
              {/* Tiempo */ }
             <input type = "radio" 

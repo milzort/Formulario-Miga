@@ -38,7 +38,7 @@ var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud=="Posgrado") || 
         
         
             <div>
-            <h2>Ahora queremos conocer más sobre tu formación académica</h2>
+            <h5>Ahora queremos conocer más sobre tu formación académica</h5>
             <h5> Selecciona el área de conocimiento en el que te especializas </h5>
            
 
@@ -67,7 +67,7 @@ var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud=="Posgrado") || 
         
         ):(
             <div>
-                <h2>Puedes continuar</h2>
+                <h5>Puedes continuar</h5>
             </div>
         )
         

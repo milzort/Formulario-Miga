@@ -17,12 +17,12 @@ export default function Dat_per_3(){
 
     return(
         <>
-        <h2>Ahora sí, saca tu credencial de elector
+        <h5>Ahora sí, saca tu credencial de elector
 recuerda que este campo es opcional,
 si decides ponerlo nos ayudas a saber
 dónde tenemos presencia y validar tu información.
 Si aún no cumples 18 años no te preocupes
-déjalo vacío.</h2>
+déjalo vacío.</h5>
 
            
             <input type= "text" id="C_E" name="C_E" 

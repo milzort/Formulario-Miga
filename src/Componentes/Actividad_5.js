@@ -19,8 +19,8 @@ export function Activ_5(){
 
     return(
         <>
-        <h2>¿En qué actividades participas
-              que no son de trabajo?</h2>
+        <h5>¿En qué actividades participas
+              que no son de trabajo?</h5>
 
               <h5>Puedes seleccionar hasta tres casillas</h5>
        

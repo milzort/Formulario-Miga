@@ -18,7 +18,7 @@ const handleCheckedAL= (e) =>{
 
     return(
         <>
-        <h2>¿Cúal ha sido tu último grado de estudios que hayas concluido?</h2>
+        <h5>¿Cúal ha sido tu último grado de estudios que hayas concluido?</h5>
         
         <select name="Niv_Estud"  onChange={handleCheckedAL} >
         <option value = "">Selecciona alguna opción</option>
@@ -28,7 +28,7 @@ const handleCheckedAL= (e) =>{
         </select>
     
         <br/>
-        <h2>¿Trabajas en lo que estudiaste?</h2>
+        <h5>¿Trabajas en lo que estudiaste?</h5>
             
             {/* Si */ }
             <input type = "radio" 

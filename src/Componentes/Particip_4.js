@@ -18,9 +18,9 @@ export default function Dat_parti_4(){
 
     return(
         <>
-        <h2>Nuestra forma de organización digital requiere
+        <h5>Nuestra forma de organización digital requiere
      que tengamos la capacidad para que estemos todos conectad@s
-                      ¿cuentas con lo siguiente?</h2>
+                      ¿cuentas con lo siguiente?</h5>
        
             <label htmlFor="Serv_int">Servicio de internet en casa</label>
             <input type="checkbox" id="Serv_int" name="Serv_Int_cas" 

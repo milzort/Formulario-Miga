@@ -16,7 +16,7 @@ export default function Dat_per_3(){
 
     return(
         <>
-        <h2>¿Cómo podemos contactarte?</h2>
+        <h5>¿Cómo podemos contactarte?</h5>
 
            
             <input type= "text" id="email" name="email" 

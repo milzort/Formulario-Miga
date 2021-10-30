@@ -16,11 +16,11 @@ export default function Dat_parti_1(){
 
     return(
         <>
-        <h2>¿Cómo te gustaría participar en este proyecto?</h2>
+        <h5>¿Cómo te gustaría participar en este proyecto?</h5>
 
            
 
-        <h3>Contesta con honestidad, no pasa nada y selecciona solo una opción.</h3>
+        <h6>Contesta con honestidad, no pasa nada y selecciona solo una opción.</h6>
             
             {/* Genero 1 */ }
             <input type = "radio" 

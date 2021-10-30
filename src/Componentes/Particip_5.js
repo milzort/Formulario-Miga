@@ -50,8 +50,8 @@ export default function Dat_parti_5(){
 
     return(
         <>
-        <h2>¿Qué tanto estás familiarizad@ con el manejo de tecnologías
-                        de la información?</h2>
+        <h5>¿Qué tanto estás familiarizad@ con el manejo de tecnologías
+                        de la información?</h5>
         
         {/* fami tect */ }
         <input type = "radio" 
@@ -97,7 +97,7 @@ export default function Dat_parti_5(){
 
     {tatu_1 ? (
     <>
-        <h2>¿Cuáles de estas aplicaciones o redes de comunicación usas más?</h2>
+        <h5>¿Cuáles de estas aplicaciones o redes de comunicación usas más?</h5>
        
             <label htmlFor="red_com">Discord</label>
             <input type="checkbox" id="red_com" name="Discord" 
@@ -134,7 +134,7 @@ export default function Dat_parti_5(){
             </>
             ):(
             <>
-            <h2>¿Cuáles redes sociales ocupas mas usas más?</h2>
+            <h5>¿Cuáles redes sociales ocupas mas usas más?</h5>
          <h5>Puedes seleccionar hasta 2 casillas</h5>
 
        <br/>

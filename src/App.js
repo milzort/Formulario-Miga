@@ -42,6 +42,34 @@ console.log(cont_DatPer)
 
 
 
+const [cont_DatAct,setCont_DatAct]= useState(1);
+
+  const Next_DatAct = () =>{if(cont_DatAct<6){
+    setCont_DatAct(cont_DatAct +1 )}else{
+      setCont_DatAct(6)
+    }
+  };
+  const Back_DatAct = () =>{if(cont_DatAct>1){
+    setCont_DatAct(cont_DatAct- 1 )}else{
+      setCont_DatAct(1)
+    }
+  };
+
+
+  const [cont_DatPart,setCont_DatPart]= useState(1);
+
+  const Next_DatPart = () =>{if(cont_DatPart<4){
+    setCont_DatPart(cont_DatPart +1 )}else{
+      setCont_DatPart(4)
+    }
+  };
+  const Back_DatPart = () =>{if(cont_DatPart>1){
+    setCont_DatPart(cont_DatPart- 1 )}else{
+      setCont_DatPart(1)
+    }
+  };
+
+
 
 
 
@@ -60,44 +88,56 @@ console.log(cont_DatPer)
       <body>
       <section>
 
+         { cont_DatPer===1 &&(
+                <Dat_per_1/>
+         ) }   
 
-          <Dat_per_1/>
-          <hr/>
-          <Dat_per_2/>
-          <hr/>
-          <Dat_per_3/>
-          <hr/>
-          <Dat_per_4/>      
-          <hr/>
-          <a class="waves-effect waves-light btn" onClick ={Back_DatPer}>Anterior</a>
+          { cont_DatPer===2 &&(
+                 <Dat_per_2/>
+           ) }   
+              { cont_DatPer===3 &&(
+            <Dat_per_3/>
+           ) }   
+              { cont_DatPer===4 &&(
+            <Dat_per_4/>  
+           ) }   
+  
+           <a class="waves-effect waves-light btn" onClick ={Back_DatPer}>Anterior</a>
           <a class="waves-effect waves-light btn" onClick = {Next_DatPer}>Siguiente</a>
+
           <hr/>
           <DataAL>
-          <Activ_1/>
-          <hr/> 
-          <Activ_2/> 
-          <hr/>           
-          <Activ_3/>
-          <hr/>           
-          <Activ_4/>
+          { cont_DatAct===1 &&(<Activ_1/>)}
+          
+          { cont_DatAct===2 &&(<Activ_2/>)}
+           
+          { cont_DatAct===3 &&( <Activ_3/>)}      
+         
+          { cont_DatAct===4 &&(<Activ_4/>)}        
           </DataAL>
-          <hr/> 
+
           <DataAR>
-          <Activ_5/>
-          <hr/>
-          <Activ_6/>
+          { cont_DatAct===5 &&(<Activ_5/>)}
+          { cont_DatAct===6 &&( <Activ_6/>)}
           </DataAR>
+          <a class="waves-effect waves-light btn" onClick ={Back_DatAct}>Anterior</a>
+          <a class="waves-effect waves-light btn" onClick = {Next_DatAct}>Siguiente</a>
+
           <hr/>
           <DataPP>
-          <Dat_parti_1/>
+          { cont_DatPart===1 &&( <Dat_parti_1/>)}
           <hr/>
-          <Dat_parti_2/>
-          <hr/>
-          <Dat_parti_4/>
-          <hr/>
-          <Dat_parti_5/>
+          { cont_DatPart===2 &&( <Dat_parti_2/>)}
+
+          { cont_DatPart===3 &&( <Dat_parti_4/>)}
+   
+          { cont_DatPart===4 &&( <Dat_parti_5/>)}
+       
           </DataPP>
-          <br/><br/>
+          <br/>
+          <a class="waves-effect waves-light btn" onClick ={Back_DatPart}>Anterior</a>
+          <a class="waves-effect waves-light btn" onClick = {Next_DatPart}>Siguiente</a>
+          <br/>
 
         </section>
 

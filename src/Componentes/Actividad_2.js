@@ -14,7 +14,7 @@ export function Activ_2(){
 
     return(
         <>
-        <h2>¿Actualmente cuál es tu ocupación?</h2>
+        <h5>¿Actualmente cuál es tu ocupación?</h5>
 
               <h4>Puedes seleccionar hasta tres casillas</h4>
        
