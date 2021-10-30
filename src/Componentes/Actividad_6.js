@@ -1,15 +1,15 @@
-import React, {useState,createContext, useContext} from 'react';
-import {Act_Rec} from '../Componentes/Data_act_rec';
+import React, { useContext} from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 const datos_3 = require('../helpers/act_extr.json');
 
 export function Activ_6(){
-
-    const {formAR,setFormAR} = useContext(Act_Rec);
+    const {formDG,setFormDG}= useContext(Dat_gen);
+    
 
      const handleCheckedAR= (e) =>{
        
-        setFormAR({
-            ...formAR,
+        setFormDG({
+            ...formDG,
             [e.target.name]:e.target.value,
         })
         
@@ -18,7 +18,7 @@ export function Activ_6(){
     return(
         <>
         <div class = "container">
-        {formAR.Artisticas &&(
+        {formDG.Artisticas &&(
             
             <><p>¿En qué tipo de actividad artística participas?</p><select class = "browser-default" name="Tip_Artisticas" 
             onChange={handleCheckedAR} >
@@ -32,7 +32,7 @@ export function Activ_6(){
                 </>
         ) }
 
-        {formAR.Deportivas &&(
+        {formDG.Deportivas &&(
             
             <><p>¿Qué clase de actividad deportiva practicas?</p><select class = "browser-default" name="Tip_Deportivas" 
             onChange={handleCheckedAR} >
@@ -46,7 +46,7 @@ export function Activ_6(){
                 </>
         ) }
         
-        {formAR.Politicas &&(
+        {formDG.Politicas &&(
             
             <><p>¿Cúal es el tipo de organización política en la que formas parte?</p><select class = "browser-default" name="Tip_Politicas" 
             onChange={handleCheckedAR} >
@@ -60,7 +60,7 @@ export function Activ_6(){
                 </>
         ) }
             
-            {formAR.Ong &&(
+            {formDG.Ong &&(
             
             <><p>¿Qué tipo de ONG pertenrces?</p><select class = "browser-default" name="Tip_Ong" 
             onChange={handleCheckedAR} >
@@ -74,7 +74,7 @@ export function Activ_6(){
                 </>
         ) }
 
-            {formAR.Gpo_ayud &&(
+            {formDG.Gpo_ayud &&(
             
             <><p>¿Qué tipo de grupo de ayuda apoyas?</p><select class = "browser-default" name="Tip_Gpo_ayud" 
             onChange={handleCheckedAR} >
@@ -88,7 +88,7 @@ export function Activ_6(){
                 </>
         ) }
 
-            {formAR.Labor_com &&(
+            {formDG.Labor_com &&(
             
             <><p>¿Qué tipo de labor comunitaria realizas?</p><select class = "browser-default" name="Tip_Labor_com" 
             onChange={handleCheckedAR} >

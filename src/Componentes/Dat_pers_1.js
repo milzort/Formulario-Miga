@@ -1,24 +1,28 @@
-import React, {useState,Component} from 'react';
+import React, {useState, useContext} from 'react';
 import DatePicker from 'react-datepicker';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'materialize-css/dist/css/materialize.min.css';
 
 export default function Dat_per_1(){
-    const[form,setForm] = useState({});
+    
+    const {formDG,setFormDG}= useContext(Dat_gen);
+
     const [fech_nam, setFech_Nam] = useState(new Date());
 
     const handleChange= (e) =>{
-       setForm({
-           ...form,
+        setFormDG({
+           ...formDG,
            [e.target.name]:e.target.value,
        }); 
     } 
 
 
     const handleChangeTime= (e) =>{
-        setForm({
-            ...form,
-            [e.name]:e.date,
+        setFech_Nam(e)
+        setFormDG({
+            ...formDG,
+            ["nacim"]:fech_nam,
         }); 
      } 
 
@@ -32,13 +36,13 @@ export default function Dat_per_1(){
 
            
             <input type= "text" id="nombre" name="nombre" 
-            value={form.name} 
+            value={formDG.name} 
             onChange={handleChange}
             placeholder="Nombre"/>
        <br/>
        <br/>
        <input type= "text" id="apellidos" name="apellidos" 
-            value={form.name} 
+            value={formDG.name} 
             onChange={handleChange}
             placeholder="Apellidos"/>
         
@@ -79,7 +83,7 @@ export default function Dat_per_1(){
             <br/>
           
         <h5>Indica cuando naciste</h5>
-        <DatePicker   name="fecha_nac" id="fecha_nac" selected={fech_nam} onChange={(date) => setFech_Nam(date)} />
+        <DatePicker   name="fecha_nac" id="fecha_nac" selected={fech_nam} onChange={handleChangeTime} />
             
             
    

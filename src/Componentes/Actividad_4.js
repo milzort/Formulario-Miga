@@ -1,17 +1,17 @@
-import React, {useState,createContext, useContext} from 'react';
-import {Act_Lab} from './Data_act_lab';
+import React, { useContext} from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 const datos_4 = require('../helpers/Estudios.json');
 
 
 export function Activ_4(){
-
-const {formAL,setFormAL}= useContext(Act_Lab);
+    
+    const {formDG,setFormDG}= useContext(Dat_gen);
 //const [area_est,setArea_est] = useState()
 
 const handleCheckedAL_AE= (e) =>{
    
-    setFormAL({
-        ...formAL,
+    setFormDG({
+        ...formDG,
         [e.target.name]:e.target.value,
     });
     
@@ -21,14 +21,14 @@ const handleCheckedAL_AE= (e) =>{
 
 const handleCheckedAL= (e) =>{
    
-    setFormAL({
-        ...formAL,
+    setFormDG({
+        ...formDG,
         [e.target.name]:e.target.value,
     })
 }
 
-if(formAL.Niv_Estud || formAL.Tip_Estudiante){
-var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud==="Posgrado") || (formAL.Tip_Estudiante==="Universidad"||formAL.Tip_Estudiante==="Posgrado"))
+if(formDG.Niv_Estud || formDG.Tip_Estudiante){
+var tatu = ((formDG.Niv_Estud==="Universidad"||formDG.Niv_Estud==="Posgrado") || (formDG.Tip_Estudiante==="Universidad"||formDG.Tip_Estudiante==="Posgrado"))
 }
   console.log(tatu) 
   
@@ -58,8 +58,8 @@ var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud==="Posgrado") ||
          <select class = "browser-default" name="Esp_estud" id="Esp_estud"  onChange ={handleCheckedAL}>
                 <option value = "">Selecciona tu especialidad</option>
                 {
-                    formAL.Ar_estud &&(
-                        datos_4.Estudio[datos_4.Estudio.findIndex(masc => masc.Area === formAL.Ar_estud)].Escpecialidad.map((el,i)=><option key={i}  value={el}>{el}</option>)
+                    formDG.Ar_estud &&(
+                        datos_4.Estudio[datos_4.Estudio.findIndex(masc => masc.Area === formDG.Ar_estud)].Escpecialidad.map((el,i)=><option key={i}  value={el}>{el}</option>)
                     )
                 }
             </select>     

@@ -1,15 +1,16 @@
 import React, {useState,useContext} from 'react';
-import {Patic_Proy} from '../Componentes/Data_parti';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 
 
 export default function Dat_parti_4(){
-    const {setFormPP,formPP}= useContext(Patic_Proy);
+    const {formDG,setFormDG}= useContext(Dat_gen);
+    
 
     const handleChecked= (e) =>{
        
-        setFormPP({
+        setFormDG({
             
-            ...formPP,
+            ...formDG,
             [e.target.name]:e.target.checked,
         })
         

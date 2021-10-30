@@ -1,13 +1,13 @@
-import React, {useState,Component} from 'react';
-
+import React, {useContext} from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 
 export default function Dat_per_3(){
-    const[form,setForm] = useState({});
-    const [fech_nam, setFech_Nam] = useState(new Date());
+    const {formDG,setFormDG}= useContext(Dat_gen);
+    
 
     const handleChange= (e) =>{
-       setForm({
-           ...form,
+        setFormDG({
+           ...formDG,
            [e.target.name]:e.target.value,
        }); 
     } 
@@ -27,13 +27,13 @@ déjalo vacío.</h5>
 
            
             <input type= "text" id="C_E" name="C_E" 
-            value={form.name} 
+            value={formDG.name} 
             onChange={handleChange}
             placeholder="Clave de Elector"/>
        <br/>
        <br/>
        <input type= "text" id="D_E" name="D_E" 
-            value={form.name} 
+            value={formDG.name} 
             onChange={handleChange}
             placeholder="Distrito Electoral"/>
         <br/>

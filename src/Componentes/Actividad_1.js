@@ -1,17 +1,17 @@
-import React, {useState,createContext, useContext} from 'react';
-import {Act_Lab} from '../Componentes/Data_act_lab';
+import React, { useContext} from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 import 'materialize-css/dist/css/materialize.min.css';
 const datos_2 = require('../helpers/Trabajo.json');
 
 
 export function Activ_1(){
 
-const {formAL,setFormAL}= useContext(Act_Lab);
+    const {formDG,setFormDG}= useContext(Dat_gen);
 
 const handleCheckedAL= (e) =>{
    
-    setFormAL({
-        ...formAL,
+    setFormDG({
+        ...formDG,
         [e.target.name]:e.target.value,
     })
     

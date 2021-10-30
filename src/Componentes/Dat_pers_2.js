@@ -1,5 +1,6 @@
 import M from "materialize-css";
-import React, { useEffect, useState } from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
+import React, { useEffect, useState,useContext } from 'react';
 const datos = require('../helpers/estados.json');
 
 
@@ -13,21 +14,26 @@ function Dat_per_2() {
 
     const [sel_Estado, setSelEstado] = useState("");
     const [sel_Municipios, setSelMuni] = useState("");
-    const [form, setForm] = useState({});
+    const {formDG,setFormDG}= useContext(Dat_gen);
 
 
 
     const handleChange = (e) => {
-        setForm({
-            ...form,
+        setFormDG({
+            ...formDG,
             [e.target.name]: e.target.value,
         });
+
     };
 
     const handleChangeEst = (e) => {
         setSelEstado(
             e.target.value
         );
+        setFormDG({
+            ...formDG,
+            ["Estado"]:e.target.value,
+        }); 
 
     };
 
@@ -35,6 +41,10 @@ function Dat_per_2() {
         setSelMuni(
             e.target.value
         );
+        setFormDG({
+            ...formDG,
+            ["Municipio"]:e.target.value,
+        }); 
 
     };
 
@@ -71,7 +81,7 @@ function Dat_per_2() {
 
 
             <input type="text" id="Cod_Post" name="Cod_Post"
-                value={form.name}
+                value={formDG.name}
                 onChange={handleChange}
                 placeholder="Código Postal" />
             <br />

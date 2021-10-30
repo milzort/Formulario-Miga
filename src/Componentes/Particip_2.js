@@ -1,16 +1,16 @@
 import React, {useState,useContext} from 'react';
-import {Patic_Proy} from '../Componentes/Data_parti';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 
 
 export default function Dat_parti_2(){
-    const {setFormPP,formPP}= useContext(Patic_Proy);
+    const {formDG,setFormDG}= useContext(Dat_gen);
     const[formPP_aux,setFormPP_aux] = useState({});
 
     const handleChecked= (e) =>{
        
-        setFormPP({
+        setFormDG({
             
-            ...formPP,
+            ...formDG,
             [e.target.name]:e.target.checked,
         });
         setFormPP_aux({
@@ -22,21 +22,21 @@ export default function Dat_parti_2(){
      }
 
      const handleChange= (e) =>{
-        setFormPP({
-           ...formPP,
+        setFormDG({
+           ...formDG,
            [e.target.name]:e.target.value,
        }); 
     } 
     
      var numcheck = Object.values(formPP_aux).filter(verd => verd === true).length;
 
-     if( !formPP.Tip_parti ||formPP.Tip_parti==="Parti_A"){
+     if( !formDG.Tip_parti ||formDG.Tip_parti==="Parti_A"){
         var tatu_1 = false
         }else{
             var tatu_1 = true
         }
 
-        if(formPP.Tip_parti==="Parti_B"){
+        if(formDG.Tip_parti==="Parti_B"){
             var tatu_2 = false
             }else{
                 var tatu_2 = true

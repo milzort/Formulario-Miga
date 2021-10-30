@@ -6,6 +6,7 @@ import React, {useEffect,useState,createContext, useContext} from 'react';
 import {DataAR} from './Componentes/Data_act_rec';
 import {DataAL} from './Componentes/Data_act_lab';
 import {DataPP} from './Componentes/Data_parti';
+import {DataGen} from './Componentes/Data_act_gen';
 import Dat_per_1 from './Componentes/Dat_pers_1';
 import Dat_per_2 from './Componentes/Dat_pers_2';
 import Dat_per_3 from './Componentes/Dat_pers_3';
@@ -90,12 +91,15 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
       </header>
       <body>
       <section>
+      
+      <DataGen> 
       <div class = "container">
       <ul class="collapsible">
       
       <li>
       <div class="collapsible-header">Datos Generales               1/3</div>
       <div class="collapsible-body">
+      
          { cont_DatPer===1 &&(
                 <Dat_per_1/>
          ) }   
@@ -109,7 +113,7 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
               { cont_DatPer===4 &&(
             <Dat_per_4/>  
            ) }   
-  
+          
            <a class="waves-effect waves-light btn" onClick ={Back_DatPer}>Anterior</a>
           <a class="waves-effect waves-light btn" onClick = {Next_DatPer}>Siguiente</a>
           </div>
@@ -120,7 +124,7 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
         <li>
         <div class="collapsible-header">Actividades               2/3</div>
         <div class="collapsible-body">
-        <DataAL>
+       
           { cont_DatAct===1 &&(<Activ_1/>)}
           
           { cont_DatAct===2 &&(<Activ_2/>)}
@@ -128,12 +132,10 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
           { cont_DatAct===3 &&( <Activ_3/>)}      
          
           { cont_DatAct===4 &&(<Activ_4/>)}        
-          </DataAL>
-
-          <DataAR>
+        
           { cont_DatAct===5 &&(<Activ_5/>)}
           { cont_DatAct===6 &&( <Activ_6/>)}
-          </DataAR>
+        
           <a class="waves-effect waves-light btn" onClick ={Back_DatAct}>Anterior</a>
           <a class="waves-effect waves-light btn" onClick = {Next_DatAct}>Siguiente</a>
           </div>
@@ -144,7 +146,6 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
         <li>
         <div class="collapsible-header">Participacion               3/3</div>
         <div class="collapsible-body">
-          <DataPP>
           { cont_DatPart===1 &&( <Dat_parti_1/>)}
           
           { cont_DatPart===2 &&( <Dat_parti_2/>)}
@@ -153,7 +154,6 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
    
           { cont_DatPart===4 &&( <Dat_parti_5/>)}
        
-          </DataPP>
           <br/>
           <a class="waves-effect waves-light btn" onClick ={Back_DatPart}>Anterior</a>
           <a class="waves-effect waves-light btn" onClick = {Next_DatPart}>Siguiente</a>
@@ -162,6 +162,8 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
           </li>
       </ul>
       </div>
+      </DataGen>
+      
       </section>
 
  

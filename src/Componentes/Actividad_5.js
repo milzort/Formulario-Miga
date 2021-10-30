@@ -1,16 +1,20 @@
-import React, {useState,createContext, useContext} from 'react';
-import {Act_Rec} from '../Componentes/Data_act_rec';
+import React, {useState, useContext} from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 
  
 
 export function Activ_5(){
-    const {setFormAR,formAR}= useContext(Act_Rec);
+    const {formDG,setFormDG}= useContext(Dat_gen);
+    const[formAR,setFormAR] = useState({});
 
     const handleCheckedAR= (e) =>{
        
-        setFormAR({
-            
+        setFormAR({    
             ...formAR,
+            [e.target.name]:e.target.checked,
+        })
+        setFormDG({    
+            ...formDG,
             [e.target.name]:e.target.checked,
         })
         

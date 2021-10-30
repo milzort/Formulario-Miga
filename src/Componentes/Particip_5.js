@@ -1,18 +1,18 @@
 import React, {useState,useContext} from 'react';
-import {Patic_Proy} from '../Componentes/Data_parti';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 
 
  
 
 export default function Dat_parti_5(){
-    const {formPP,setFormPP}= useContext(Patic_Proy);
+    const {formDG,setFormDG}= useContext(Dat_gen);
     const[formPP_aux1,setFormPP_aux1] = useState({});
 
     const handleChecked= (e) =>{
        
-        setFormPP({
+        setFormDG({
             
-            ...formPP,
+            ...formDG,
             [e.target.name]:e.target.checked,
         })
         
@@ -25,15 +25,20 @@ export default function Dat_parti_5(){
             ...formPP_aux1,
             [e.target.name]:e.target.checked,
         })
+        setFormDG({
+            
+            ...formDG,
+            [e.target.name]:e.target.checked,
+        })
         
      }
 
 
      const handleChange= (e) =>{
        
-        setFormPP({
+        setFormDG({
             
-            ...formPP,
+            ...formDG,
             [e.target.name]:e.target.value,
         })
         
@@ -42,7 +47,7 @@ export default function Dat_parti_5(){
      
      var numcheck = Object.values(formPP_aux1).filter(verd => verd === true).length;
     
-     if( !formPP.Tip_parti ||formPP.Tip_parti==="Parti_A"){
+     if( !formDG.Tip_parti ||formDG.Tip_parti==="Parti_A"){
         var tatu_1 = false
         }else{
             var tatu_1 = true
@@ -110,43 +115,43 @@ export default function Dat_parti_5(){
        
             <label>
             <input type="checkbox" id="red_com" name="Discord" 
-            onChange={handleChecked}  disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked}  disabled={formDG.Ninguna === true}/>
             <span>Discord</span></label>
             <br/>
 
             <label>
             <input type="checkbox" id="red_com" name="Zoom" 
-            onChange={handleChecked} disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked} disabled={formDG.Ninguna === true}/>
             <span>Zoom</span></label>
             <br/>
 
              <label>
             <input type="checkbox" id="red_com" name="Goog_meets" 
-            onChange={handleChecked} disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked} disabled={formDG.Ninguna === true}/>
             <span>Google meet</span></label>
             <br/>
 
             <label>
             <input type="checkbox" id="red_com" name="Jitsi" 
-            onChange={handleChecked} disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked} disabled={formDG.Ninguna === true}/>
             <span>Jitsi</span></label>
             <br/>
 
             <label>
             <input type="checkbox" id="red_com" name="Faceb_mess" 
-            onChange={handleChecked} disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked} disabled={formDG.Ninguna === true}/>
             <span>Facebook messenger</span></label>
             <br/>
 
             <label>
             <input type="checkbox" id="red_com" name="Whatsapp" 
-            onChange={handleChecked} disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked} disabled={formDG.Ninguna === true}/>
             <span>Whatsapp</span></label>
             <br/>
 
             <label>
             <input type="checkbox" id="red_com" name="Telegram" 
-            onChange={handleChecked} disabled={formPP.Ninguna === true}/>
+            onChange={handleChecked} disabled={formDG.Ninguna === true}/>
             <span>Telegram</span></label>
             <br/>
 
@@ -187,7 +192,7 @@ export default function Dat_parti_5(){
 
        <label>
        <input type="checkbox" id="red_soc" name="Tik_tok" 
-       onChange={handleChecked_B} disabled={numcheck>1 && (formPP_aux1.Tic_toc===false || !formPP_aux1.Tic_toc )}/>
+       onChange={handleChecked_B} disabled={numcheck>1 && (formPP_aux1.Tik_tok===false || !formPP_aux1.Tik_tok )}/>
        <span>Tik-Tok</span></label>
        <br/>
 

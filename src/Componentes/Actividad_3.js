@@ -1,15 +1,15 @@
 import M from "materialize-css";
-import React, {useState,createContext, useContext} from 'react';
-import {Act_Lab} from '../Componentes/Data_act_lab';
+import React, { useContext} from 'react';
+import {Dat_gen} from '../Componentes/Data_act_gen';
 const datos_2 = require('../helpers/Trabajo.json');
 
 export function Activ_3(){
-    const {formAL,setFormAL}= useContext(Act_Lab);
+    const {formDG,setFormDG}= useContext(Dat_gen);
 
     const handleCheckedAL= (e) =>{
        
-        setFormAL({
-            ...formAL,
+        setFormDG({
+            ...formDG,
             [e.target.name]:e.target.value,
         })
         
@@ -19,7 +19,7 @@ export function Activ_3(){
     return(
         <>
         <div class = "container">
-        {formAL.Emp_sec_pri &&(
+        {formDG.Emp_sec_pri &&(
             
             <><p>¿Cual es el área de especialidad de tu trabajo en el sector privado?</p><select class = "browser-default" name="Tip_Emp_sec_pri" 
             onChange={handleCheckedAL} >
@@ -32,7 +32,7 @@ export function Activ_3(){
                 </>
         ) }
 
-        {formAL.Emp_sec_pub &&(
+        {formDG.Emp_sec_pub &&(
             
             <><p>¿En cual área del sector público trabajas?</p><select class = "browser-default" name="Tip_Emp_sec_pub" 
             onChange={handleCheckedAL} >
@@ -45,7 +45,7 @@ export function Activ_3(){
                 </>
         ) }
         
-        {formAL.Estudiante &&(
+        {formDG.Estudiante &&(
             
             <><p>¿En qué nivel te encuentras estudiando actualmente?</p><select class = "browser-default" name="Tip_Estudiante" 
             onChange={handleCheckedAL} >
@@ -58,7 +58,7 @@ export function Activ_3(){
                 </>
         ) }
             
-            {formAL.Des_Pen &&(
+            {formDG.Des_Pen &&(
             
             <><p>¿Cuál es tu estatus actualmente?</p><select class = "browser-default" name="Tip_Des_Pen" 
             onChange={handleCheckedAL} >
@@ -71,7 +71,7 @@ export function Activ_3(){
                 </>
         ) }
 
-            {formAL.Emp_inf &&(
+            {formDG.Emp_inf &&(
             
             <><p>¿En que tipo del sector informal participas?</p><select class = "browser-default" name="Tip_Emp_inf" 
             onChange={handleCheckedAL} >
@@ -84,7 +84,7 @@ export function Activ_3(){
                 </>
         ) }
 
-            {formAL.Trab_dom &&(
+            {formDG.Trab_dom &&(
             
             <><p>¿Qué tipo de labor realizas como trabajo doméstico/cuidado?</p><select class = "browser-default" name="Tip_Trab_dom" 
             onChange={handleCheckedAL} >
@@ -97,7 +97,7 @@ export function Activ_3(){
                 </>
         ) } 
 
-            {formAL.Neg_part &&(
+            {formDG.Neg_part &&(
             
             <><p>¿En que tipo de negocio particular/familiar participas?</p><select class = "browser-default" name="Tip_Neg_part" 
             onChange={handleCheckedAL} >
@@ -110,7 +110,7 @@ export function Activ_3(){
                 </>
         ) } 
 
-            {formAL.Freelancer &&(
+            {formDG.Freelancer &&(
             
             <><p>¿En qué área te especializas/ejerces como trabajador freelancer?</p><select class = "browser-default" name="Tip_Freelancer" 
             onChange={handleCheckedAL} >
@@ -123,7 +123,7 @@ export function Activ_3(){
                 </>
         ) } 
 
-            {formAL.Docen_Acad &&(
+            {formDG.Docen_Acad &&(
             
             <><p>¿Cuál es tu área de actividad actualmente dentro de la docencia/academia?</p><select class = "browser-default" name="Tip_Docen_Acad" 
             onChange={handleCheckedAL} >
