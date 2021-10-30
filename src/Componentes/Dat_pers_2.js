@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import M from "materialize-css";
+import React, { useEffect, useState } from 'react';
 const datos = require('../helpers/estados.json');
 
 
 
+
 function Dat_per_2() {
+    
+
+    useEffect(() => { M.AutoInit();}, []) 
+
 
     const [sel_Estado, setSelEstado] = useState("");
     const [sel_Municipios, setSelMuni] = useState("");
     const [form, setForm] = useState({});
+
+
 
     const handleChange = (e) => {
         setForm({
@@ -30,7 +38,8 @@ function Dat_per_2() {
 
     };
 
-
+    sel_Estado && (
+    console.log(datos.Estados[datos.Estados.findIndex(masc => masc.Estado === sel_Estado)].Municipios))
 
     return (
         <div>
@@ -47,7 +56,7 @@ function Dat_per_2() {
             <br />
             <br />
 
-            <div class="input-field col s12">
+            <div class="input-field col s11">
                 <select name="Municipio" id="Municipio" onChange={handleChangeMuni}>
                     <option value="">Selecciona tu Municipio/Alcaldía</option>
                     {sel_Estado && (
@@ -71,16 +80,6 @@ function Dat_per_2() {
 
     );
 }
-
-<><script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script><script type="text/javascript" src="js/materialize.min.js"></script></>
-
-
-document.addEventListener('DOMContentLoaded', function() {
-	M.FormSelect.init(document.querySelector("select[name='Estado']"));
-    M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'));
-});
-
-
 
 
 export default Dat_per_2;
