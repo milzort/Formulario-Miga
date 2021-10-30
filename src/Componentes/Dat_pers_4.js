@@ -17,6 +17,7 @@ export default function Dat_per_3(){
 
     return(
         <>
+        <div class = "container">
         <h5>Ahora sí, saca tu credencial de elector
 recuerda que este campo es opcional,
 si decides ponerlo nos ayudas a saber
@@ -36,7 +37,7 @@ déjalo vacío.</h5>
             onChange={handleChange}
             placeholder="Distrito Electoral"/>
         <br/>
-        
+        </div>
         </>
     ); 
 }

@@ -26,21 +26,21 @@ export default function Dat_per_1(){
     return(
 
         <>
-         
+         <div class = "container">
          
         <h5>¿Cómo te llamas?</h5>
 
            
-            <input type= "text" id="apellidos" name="apellidos" 
-            value={form.name} 
-            onChange={handleChange}
-            placeholder="Apellidos"/>
-       <br/>
-       <br/>
-       <input type= "text" id="nombre" name="nombre" 
+            <input type= "text" id="nombre" name="nombre" 
             value={form.name} 
             onChange={handleChange}
             placeholder="Nombre"/>
+       <br/>
+       <br/>
+       <input type= "text" id="apellidos" name="apellidos" 
+            value={form.name} 
+            onChange={handleChange}
+            placeholder="Apellidos"/>
         
         <br/>
        
@@ -86,7 +86,7 @@ export default function Dat_per_1(){
             <br/>
             <br/> 
 
-           
+           </div>
         </>
     ); 
 }

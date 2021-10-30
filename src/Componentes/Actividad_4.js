@@ -28,21 +28,23 @@ const handleCheckedAL= (e) =>{
 }
 
 if(formAL.Niv_Estud || formAL.Tip_Estudiante){
-var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud=="Posgrado") || (formAL.Tip_Estudiante=="Universidad"||formAL.Tip_Estudiante=="Posgrado"))
+var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud==="Posgrado") || (formAL.Tip_Estudiante==="Universidad"||formAL.Tip_Estudiante==="Posgrado"))
 }
   console.log(tatu) 
   
     return(
         
-        tatu ? (
         
+        
+        tatu ? (
+            <div class = "container">
         
             <div>
             <h5>Ahora queremos conocer más sobre tu formación académica</h5>
             <h5> Selecciona el área de conocimiento en el que te especializas </h5>
            
 
-             <select name="Ar_estud" id="Ar_estud"  onChange ={handleCheckedAL_AE} >
+             <select class = "browser-default" name="Ar_estud" id="Ar_estud"  onChange ={handleCheckedAL_AE} >
                 <option value = "">Selecciona tu área de conocimiento</option>
                 {
                     datos_4.Estudio.map((el,i)=><option key={i} value={el.Area}>{el.Area}</option>)
@@ -53,7 +55,7 @@ var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud=="Posgrado") || 
             <br/>
 
             
-         <select name="Esp_estud" id="Esp_estud"  onChange ={handleCheckedAL}>
+         <select class = "browser-default" name="Esp_estud" id="Esp_estud"  onChange ={handleCheckedAL}>
                 <option value = "">Selecciona tu especialidad</option>
                 {
                     formAL.Ar_estud &&(
@@ -63,15 +65,16 @@ var tatu = ((formAL.Niv_Estud==="Universidad"||formAL.Niv_Estud=="Posgrado") || 
             </select>     
         
             </div>
-       
+            </div>
         
-        ):(
+        ):( <div class = "container">
             <div>
                 <h5>Puedes continuar</h5>
+            </div>
             </div>
         )
         
         )
       
-    
+       
 }

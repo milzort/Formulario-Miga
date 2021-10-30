@@ -1,3 +1,4 @@
+import M from "materialize-css";
 import React, {useState,createContext, useContext} from 'react';
 import {Act_Lab} from '../Componentes/Data_act_lab';
 const datos_2 = require('../helpers/Trabajo.json');
@@ -13,12 +14,14 @@ export function Activ_3(){
         })
         
     }
+    
 
     return(
         <>
+        <div class = "container">
         {formAL.Emp_sec_pri &&(
             
-            <><p>¿Cual es el área de especialidad de tu trabajo en el sector privado?</p><select name="Tip_Emp_sec_pri" 
+            <><p>¿Cual es el área de especialidad de tu trabajo en el sector privado?</p><select class = "browser-default" name="Tip_Emp_sec_pri" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {                   
@@ -31,7 +34,7 @@ export function Activ_3(){
 
         {formAL.Emp_sec_pub &&(
             
-            <><p>¿En cual área del sector público trabajas?</p><select name="Tip_Emp_sec_pub" 
+            <><p>¿En cual área del sector público trabajas?</p><select class = "browser-default" name="Tip_Emp_sec_pub" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {                  
@@ -44,7 +47,7 @@ export function Activ_3(){
         
         {formAL.Estudiante &&(
             
-            <><p>¿En qué nivel te encuentras estudiando actualmente?</p><select name="Tip_Estudiante" 
+            <><p>¿En qué nivel te encuentras estudiando actualmente?</p><select class = "browser-default" name="Tip_Estudiante" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {                   
@@ -57,7 +60,7 @@ export function Activ_3(){
             
             {formAL.Des_Pen &&(
             
-            <><p>¿Cuál es tu estatus actualmente?</p><select name="Tip_Des_Pen" 
+            <><p>¿Cuál es tu estatus actualmente?</p><select class = "browser-default" name="Tip_Des_Pen" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {                    
@@ -70,7 +73,7 @@ export function Activ_3(){
 
             {formAL.Emp_inf &&(
             
-            <><p>¿En que tipo del sector informal participas?</p><select name="Tip_Emp_inf" 
+            <><p>¿En que tipo del sector informal participas?</p><select class = "browser-default" name="Tip_Emp_inf" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {               
@@ -83,7 +86,7 @@ export function Activ_3(){
 
             {formAL.Trab_dom &&(
             
-            <><p>¿Qué tipo de labor realizas como trabajo doméstico/cuidado?</p><select name="Tip_Trab_dom" 
+            <><p>¿Qué tipo de labor realizas como trabajo doméstico/cuidado?</p><select class = "browser-default" name="Tip_Trab_dom" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {                   
@@ -96,7 +99,7 @@ export function Activ_3(){
 
             {formAL.Neg_part &&(
             
-            <><p>¿En que tipo de negocio particular/familiar participas?</p><select name="Tip_Neg_part" 
+            <><p>¿En que tipo de negocio particular/familiar participas?</p><select class = "browser-default" name="Tip_Neg_part" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {                   
@@ -109,7 +112,7 @@ export function Activ_3(){
 
             {formAL.Freelancer &&(
             
-            <><p>¿En qué área te especializas/ejerces como trabajador freelancer?</p><select name="Tip_Freelancer" 
+            <><p>¿En qué área te especializas/ejerces como trabajador freelancer?</p><select class = "browser-default" name="Tip_Freelancer" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -122,7 +125,7 @@ export function Activ_3(){
 
             {formAL.Docen_Acad &&(
             
-            <><p>¿Cuál es tu área de actividad actualmente dentro de la docencia/academia?</p><select name="Tip_Docen_Acad" 
+            <><p>¿Cuál es tu área de actividad actualmente dentro de la docencia/academia?</p><select class = "browser-default" name="Tip_Docen_Acad" 
             onChange={handleCheckedAL} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -132,6 +135,7 @@ export function Activ_3(){
                 <br />
                 </>
         ) } 
+        </div>
      </>
     )
 

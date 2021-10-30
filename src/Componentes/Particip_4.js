@@ -18,27 +18,38 @@ export default function Dat_parti_4(){
 
     return(
         <>
+        <div class = "container">
         <h5>Nuestra forma de organización digital requiere
      que tengamos la capacidad para que estemos todos conectad@s
                       ¿cuentas con lo siguiente?</h5>
-       
-            <label htmlFor="Serv_int">Servicio de internet en casa</label>
+        <form> 
+            <label>
             <input type="checkbox" id="Serv_int" name="Serv_Int_cas" 
             onChange={handleChecked}  />
-            <br/>
-            <label htmlFor="Serv_int">Servicio de datos móbiles</label>
-            <input type="checkbox" id="Serv_int" name="Serv_Dat_mov" 
-            onChange={handleChecked} />
-            <br/>
-             <label htmlFor="Serv_int">Teléfono celular con conexión a internet</label>
-            <input type="checkbox" id="Serv_int" name="Serv_Cel_int" 
-            onChange={handleChecked} />
-            <br/>
-            <label htmlFor="Serv_int">Laptop o computadora de escritorio</label>
-            <input type="checkbox" id="Serv_int" name="Serv_Lap_comp" 
-            onChange={handleChecked} />
+            <span>Servicio de internet en casa</span>
+            </label>
             <br/>
 
+            <label>
+            <input type="checkbox" id="Serv_int" name="Serv_Dat_mov" 
+            onChange={handleChecked} />
+            <span>Servicio de datos móbiles</span></label>
+            <br/>
+
+             <label >
+            <input type="checkbox" id="Serv_int" name="Serv_Cel_int" 
+            onChange={handleChecked} />
+            <span>Teléfono celular con conexión a internet</span></label>
+            <br/>
+
+            <label>
+            <input type="checkbox" id="Serv_int" name="Serv_Lap_comp" 
+            onChange={handleChecked} />
+            <span>Laptop o computadora de escritorio</span></label>
+            <br/>
+
+        </form> 
+        </div>
         </>
     ); 
 }

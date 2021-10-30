@@ -17,9 +17,10 @@ export function Activ_6(){
 
     return(
         <>
+        <div class = "container">
         {formAR.Artisticas &&(
             
-            <><p>¿En qué tipo de actividad artística participas?</p><select name="Tip_Artisticas" 
+            <><p>¿En qué tipo de actividad artística participas?</p><select class = "browser-default" name="Tip_Artisticas" 
             onChange={handleCheckedAR} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -33,7 +34,7 @@ export function Activ_6(){
 
         {formAR.Deportivas &&(
             
-            <><p>¿Qué clase de actividad deportiva practicas?</p><select name="Tip_Deportivas" 
+            <><p>¿Qué clase de actividad deportiva practicas?</p><select class = "browser-default" name="Tip_Deportivas" 
             onChange={handleCheckedAR} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -47,7 +48,7 @@ export function Activ_6(){
         
         {formAR.Politicas &&(
             
-            <><p>¿Cúal es el tipo de organización política en la que formas parte?</p><select name="Tip_Politicas" 
+            <><p>¿Cúal es el tipo de organización política en la que formas parte?</p><select class = "browser-default" name="Tip_Politicas" 
             onChange={handleCheckedAR} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -61,7 +62,7 @@ export function Activ_6(){
             
             {formAR.Ong &&(
             
-            <><p>¿Qué tipo de ONG pertenrces?</p><select name="Tip_Ong" 
+            <><p>¿Qué tipo de ONG pertenrces?</p><select class = "browser-default" name="Tip_Ong" 
             onChange={handleCheckedAR} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -75,7 +76,7 @@ export function Activ_6(){
 
             {formAR.Gpo_ayud &&(
             
-            <><p>¿Qué tipo de grupo de ayuda apoyas?</p><select name="Tip_Gpo_ayud" 
+            <><p>¿Qué tipo de grupo de ayuda apoyas?</p><select class = "browser-default" name="Tip_Gpo_ayud" 
             onChange={handleCheckedAR} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -89,7 +90,7 @@ export function Activ_6(){
 
             {formAR.Labor_com &&(
             
-            <><p>¿Qué tipo de labor comunitaria realizas?</p><select name="Tip_Labor_com" 
+            <><p>¿Qué tipo de labor comunitaria realizas?</p><select class = "browser-default" name="Tip_Labor_com" 
             onChange={handleCheckedAR} >
                 <option value = "">Selecciona alguna opción</option>
                {
@@ -100,6 +101,7 @@ export function Activ_6(){
                 <br />
                 </>
         ) } 
+        </div>
      </>
     )
 

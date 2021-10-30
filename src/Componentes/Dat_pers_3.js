@@ -16,6 +16,8 @@ export default function Dat_per_3(){
 
     return(
         <>
+         <div class = "container">
+
         <h5>¿Cómo podemos contactarte?</h5>
 
            
@@ -30,7 +32,7 @@ export default function Dat_per_3(){
             onChange={handleChange}
             placeholder="Telefono (10 Digi)"/>
         <br/>
-        
+        </div>
         </>
     ); 
 }

@@ -42,28 +42,30 @@ function Dat_per_2() {
     console.log(datos.Estados[datos.Estados.findIndex(masc => masc.Estado === sel_Estado)].Municipios))
 
     return (
+       <div class = "container">
+
         <div>
             <h5>¿Donde vives actualmente?</h5>
 
-            <div class="input-field col s12">
-                <select name="Estado" id="Estado" onChange={handleChangeEst}>
+            
+                <select class = "browser-default" name="Estado" id="Estado" onChange={handleChangeEst}>
                     <option value="">Selecciona tu Estado</option>
                     {datos.Estados.map((el, i) => <option key={i} value={el.Estado}>{el.Estado}</option>)}
                 </select>
-            </div>
+           
 
 
             <br />
             <br />
 
-            <div class="input-field col s11">
-                <select name="Municipio" id="Municipio" onChange={handleChangeMuni}>
+          
+                <select class = "browser-default" name="Municipio" id="Municipio" onChange={handleChangeMuni}>
                     <option value="">Selecciona tu Municipio/Alcaldía</option>
                     {sel_Estado && (
                         datos.Estados[datos.Estados.findIndex(masc => masc.Estado === sel_Estado)].Municipios.map((el, i) => <option key={i} value={el}>{el}</option>)
                     )}
                 </select>
-            </div>
+            
 
             <h5>Si lo deseas compártenos tu código postal</h5>
 
@@ -76,6 +78,7 @@ function Dat_per_2() {
 
         </div>
 
+        </div>
 
 
     );
