@@ -2,10 +2,9 @@
 import './App.css';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
+import logo_white from './assets/images/logo_white.png';
+import divisor from './assets/images/register_divisor.png';
 import React, {useEffect,useState,createContext, useContext} from 'react';
-import {DataAR} from './Componentes/Data_act_rec';
-import {DataAL} from './Componentes/Data_act_lab';
-import {DataPP} from './Componentes/Data_parti';
 import {DataGen} from './Componentes/Data_act_gen';
 import Dat_per_1 from './Componentes/Dat_pers_1';
 import Dat_per_2 from './Componentes/Dat_pers_2';
@@ -85,9 +84,10 @@ const [cont_DatAct,setCont_DatAct]= useState(1);
 
       <header className="App-header">
       <section>
-        <h1>Formulario migala</h1>
+        <img src={logo_white} className="App-logo" alt ="logo"/>
+        
         </section>  
-
+        <img src={divisor} className="divisor"/>
       </header>
       <body>
       <section>

@@ -7,14 +7,9 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background: linear-gradient(to bottom, rgb(9, 9, 68), rgb(139, 27, 27));
+  background:  rgb(35, 5, 75);
   min-height: 15vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +22,11 @@
 .App-link {
   color: #61dafb;
 }
+
+.divisor {
+  background-position: bottom;
+}
+
 
 @keyframes App-logo-spin {
   from {
